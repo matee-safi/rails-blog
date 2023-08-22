@@ -15,7 +15,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response.body).to include('Posts')
     end
   end
-  
+
   describe 'GET #show' do
     before do
       get user_post_path(user_id: 1, id: 1)
