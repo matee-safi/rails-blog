@@ -1,6 +1,7 @@
-<h1>A list of Users</h1>
-<p>Sample user</p>
-<p>Sample user</p>
-<p>Sample user</p>
-<p>Sample user</p>
-<p>Sample user</p>
+<div class="users p-5 align-items-center">
+  <% @users.each do |user| %>
+    <%= link_to user do %>
+      <%= render partial: "user", locals: { user: user, myclass: "orange-shadow" } %>
+    <% end %>
+  <% end %>
+</div>

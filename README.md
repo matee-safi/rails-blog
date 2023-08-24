@@ -168,6 +168,7 @@ If you like this project give it a star.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse for making this possible.
+<a href="https://www.flaticon.com/free-icons/blog" title="blog icons">Blog icons created by Fathema Khanom - Flaticon</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

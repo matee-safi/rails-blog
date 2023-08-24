@@ -1,6 +1,14 @@
-<h1>Sample Post</h1>
-<p>Sample Comment<p>
-<p>Sample Comment<p>
-<p>Sample Comment<p>
-<p>Sample Comment<p>
-<p>Sample Comment<p>
+<div class="shadow-white rounded border p-3 m-5">
+  <div class="d-flex justify-content-between mb-4">
+    <h4><%= @post.title %> by <%= @user.name %></h4>
+    <h5>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></h5>
+  </div>
+  <p><%= @post.text%></p>
+  <% if @post.comments.length > 0 %>
+    <div class="comments border-top pt-3 mt-5">
+        <% @post.comments.each do |comment| %>
+            <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+    </div>
+  <% end %>
+</div>

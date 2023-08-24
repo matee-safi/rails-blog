@@ -1,15 +1,62 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background: linear-gradient(#111, #333);
+  min-height: 100vh;
+}
+
+nav {
+  color: hsl(24, 100%, 57%);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+  box-shadow: none;
+}
+
+.user-images {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.user {
+  color: #fff;
+  background: linear-gradient(#ff810c, #e26d00);
+  transition: all, 0.2s;
+}
+
+.orange-shadow:hover {
+  box-shadow: 0 0 20px rgba(255, 136, 0, 0.74);
+}
+
+.shadow-white {
+  box-shadow: 0 0 10px #8a8a8a;
+  transition: all 0.3s;
+}
+
+.post:hover {
+  box-shadow: none;
+}
+
+.see-all-posts-btn {
+  border-radius: 50px;
+  font-size: large;
+  font-weight: bold;
+  background: linear-gradient(#ff810c, #e26d00);
+  box-shadow: 0 0 10px #ff810c;
+  transition: all 0.2s;
+}
+
+.see-all-posts-btn:hover {
+  box-shadow: none;
+}
