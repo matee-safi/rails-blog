@@ -1,11 +1,4 @@
-<div class="user no-hover-effect rounded row align-items-center m-5 mb-1 p-2">
-    <%= image_tag(@user.photo, alt: "user image", class: "col-3 user-images") %>
-    <div class="justify-content-start mb-5 col-6">
-        <h1><%= @user.name %></h1>
-    </div>
-    <h6 class="align-items-end col-3">Number of posts: <%= @user.posts_counter %></h6>
-</div>
-
+<%= render partial: @user, locals: { user: @user, myclass: "" } %>
 <div class="p-5">
     <div class="shadow-white rounded border p-3 mb-5">
         <h4>Bio</h4>
@@ -30,8 +23,6 @@
       <h2 class="text-center text-secondary"><%= @user.name %> has no posts<h2>
     <% end %>
     <div class="d-flex justify-content-center">
-      <% if @user.posts.length > 3 %>
-        <%= link_to "See all posts", user_posts_path(@user), class:'see-all-posts-btn p-3' %>
-      <% end %>
+      <%= link_to "See all posts", user_posts_path(@user), class:'see-all-posts-btn p-3' %>
     </div>
 </div>

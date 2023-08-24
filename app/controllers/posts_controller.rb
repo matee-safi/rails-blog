@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = Post.all
+    @user.posts_counter = User.find(params[:user_id]).posts.count
   end
 
   def show

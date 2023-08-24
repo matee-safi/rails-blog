@@ -30,18 +30,13 @@ a:hover {
 }
 
 .user {
-  box-shadow: none;
   color: #fff;
   background: linear-gradient(#ff810c, #e26d00);
   transition: all, 0.2s;
 }
 
-.user:hover {
+.orange-shadow:hover {
   box-shadow: 0 0 20px rgba(255, 136, 0, 0.74);
-}
-
-.no-hover-effect:hover {
-  box-shadow: none;
 }
 
 .shadow-white {
