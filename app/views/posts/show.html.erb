@@ -11,4 +11,14 @@
         <% end %>
     </div>
   <% end %>
+  <div class="mt-5 d-flex justify-content-start gap-5">
+    <%= bootstrap_form_with(model: @like, url: user_post_likes_path(@post.author, @post.id) ) do |f| %>
+      <div class="rounded user orange-shadow">
+        <%= f.submit "Like", class: 'btn text-white user orange-shadow' %>
+      </div>
+    <% end %>
+    <%= link_to new_user_post_comment_path(@user, @post), class: 'btn user orange-shadow' do %>
+      Comment
+    <% end %>
+  </div>
 </div>

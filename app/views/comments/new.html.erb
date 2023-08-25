@@ -1,0 +1,6 @@
+<div class="p-5">
+    <%= bootstrap_form_with model: @comment, url: user_post_comments_path, local: true do |f| %>
+        <%= f.text_area :text, placeholder: 'Add a comment...' %>
+        <%= f.submit "Create", class: 'btn text-white user orange-shadow' %>
+    <% end %>
+</div>
