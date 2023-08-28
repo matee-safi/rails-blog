@@ -12,6 +12,16 @@
 
   <body>
     <%= render "shared/navbar" %>
+    <% if notice %>
+      <div class="d-flex justify-content-center">
+        <p class="text-success"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="d-flex justify-content-center">
+        <p class="text-danger"><%= alert %></p>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

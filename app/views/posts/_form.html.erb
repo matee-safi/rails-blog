@@ -1,0 +1,5 @@
+<%= bootstrap_form_with model: @post, url: user_posts_path, local: true do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :text %>
+  <%= f.submit "Create Post" %>
+<% end %>

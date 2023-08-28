@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'health/index'
-  resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+  resources :users do
+    resources :posts do
+      resources :comments, only: [:create, :new]
+      resources :likes, only: [:create]
+    end
   end
   root "users#index"
 end
