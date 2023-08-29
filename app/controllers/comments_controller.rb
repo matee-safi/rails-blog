@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
   private
 
   def find_post
-    @post = Post.find(params[:post_id])
+    @post = Post.includes(:author).find(params[:post_id])
   end
 
   def comment_params
