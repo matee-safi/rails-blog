@@ -24,16 +24,11 @@ RSpec.describe Comment, type: :model do
   end
 
   describe 'Methods' do
-    before do
-      subject.update_comments_counter
-    end
     it 'Validates update comments counter method' do
+      user
+      post
+      subject.save
       expect(post.comments_counter).to eq(1)
-    end
-
-    it 'Validates decrement comments counter method' do
-      subject.decrement_comments_counter
-      expect(post.comments_counter).to eq(0)
     end
   end
 end

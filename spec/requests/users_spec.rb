@@ -12,7 +12,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template(:index)
     end
     it 'if the response body includes correct placeholder text' do
-      expect(response.body).to include('Users')
+      expect(response.body).to include('Number of posts')
     end
   end
 
