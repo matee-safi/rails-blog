@@ -5,7 +5,7 @@ RSpec.describe Like, type: :model do
   let(:post) { Post.create(author: user, title: 'Sample title', likes_counter: 1) }
 
   subject do
-    Like.new(author: user, post: post)
+    Like.new(author: user, post:)
   end
   describe 'Validations' do
     it 'expect like to be valid' do
