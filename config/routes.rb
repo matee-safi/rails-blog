@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'health/index'
   resources :users do
     resources :posts do
