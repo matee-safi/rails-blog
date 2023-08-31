@@ -82,8 +82,6 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-
-
 ```sh
  gem install rails
 ```
@@ -100,7 +98,6 @@ Clone this repository to your desired folder:
 ### Install
 
 Install this project with:
-
 
 ```sh
   cd Blog-app
@@ -134,6 +131,11 @@ To run tests, run the following command:
 - GitHub: [@githubhandle](https://github.com/matee-safi)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Ragan Hailu**
+
+- GitHub: [ragan](https://github.com/ragangithub)
+- LinkedIn: [Ragan Hailu](https://linkedin.com/in/raganhailu)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

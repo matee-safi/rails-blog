@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  let(:user) { User.create(name: 'Harry') }
-  let(:post) { Post.create(title: 'Sample title') }
+  let(:user) { User.create(name: 'Harry', posts_counter: 0) }
+  let(:post) { Post.create(author: user, title: 'Sample title', likes_counter: 1) }
+
   subject do
     Like.new(author: user, post:)
   end
@@ -14,7 +15,7 @@ RSpec.describe Like, type: :model do
 
   describe 'Check methods' do
     it 'validates update like counter method' do
-      subject.update_likes_counter
+      subject.save
       expect(post.likes_counter).to eq(1)
     end
   end

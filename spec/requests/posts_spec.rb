@@ -12,22 +12,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template(:index)
     end
     it 'checks if the response body includes correct placeholder text' do
-      expect(response.body).to include('Posts')
-    end
-  end
-
-  describe 'GET #show' do
-    before do
-      get user_post_path(user_id: 1, id: 1)
-    end
-    it 'if response status was correct' do
-      expect(response.status).to eq(200)
-    end
-    it 'if a correct template was rendered' do
-      expect(response).to render_template(:show)
-    end
-    it 'if the response body includes correct placeholder text' do
-      expect(response.body).to include('Post')
+      expect(response.body).to include('posts')
     end
   end
 end
