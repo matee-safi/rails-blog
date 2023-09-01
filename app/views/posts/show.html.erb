@@ -7,7 +7,10 @@
   <% if @post.comments.length > 0 %>
     <div class="comments border-top pt-3 mt-5">
         <% @post.comments.each do |comment| %>
-            <p><%= comment.author.name %>: <%= comment.text %></p>
+            <div class="d-flex justify-content-between">
+              <p><%= comment.author.name %>: <%= comment.text %></p>
+              <%= button_to '×', user_post_comment_path(@user, @post, comment), method: :delete, data: { confirm: "Delete this comment?" }, class: 'btn btn-danger' %>
+            </div>
         <% end %>
     </div>
   <% end %>
@@ -19,6 +22,9 @@
     <% end %>
     <%= link_to new_user_post_comment_path(@user, @post), class: 'btn user orange-shadow' do %>
       Comment
+    <% end %>
+    <% if can?(:destroy, @post) %>
+      <%= button_to 'Delete Post', user_post_path(@user, @post), method: :delete, data: { confirm: "Are you sure you want to delete this post?"}, class: 'btn btn-danger' %>
     <% end %>
   </div>
 </div>

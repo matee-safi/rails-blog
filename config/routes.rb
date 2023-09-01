@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'health/index'
   resources :users do
     resources :posts do
-      resources :comments, only: [:create, :new]
+      resources :comments, only: [:create, :new, :destroy]
       resources :likes, only: [:create]
     end
   end
