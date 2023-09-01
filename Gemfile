@@ -76,5 +76,5 @@ gem 'bootstrap_form'
 gem 'rails-controller-testing'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'devise', '~> 4.9'
 gem 'cancancan'
+gem 'devise', '~> 4.9'
